@@ -149,10 +149,10 @@ $hbox = ( $_GET['h'] == 'y' ) ? 'checked="checked"' : '';
 
 <form id="pecha">
 
-	<input name="tag" type="text" size="40" id="ptag" value="<?php echo $tag?>" title="enter a tag to search on in flickr for image" onChange="makego()"  />
+	<input name="tag" type="text" size="40" id="ptag" value="<?php echo $tag?>" title="Gib ein Schlagwort ein, für das Flickr-Bilder gesucht werden sollen" onChange="makego()"  />
 
 
-	<img src="images/tri-right.png" class="toClick"> <span id="show_label">Advanced Options</span><br />
+	<img src="images/tri-right.png" class="toClick"> <span id="show_label">erweiterte Einstellungen</span><br />
 
 	<div class="revealMenu" style="display: none;">
 	<input name="num" type="text" size="4" value="<?php echo $snum?>" id="snum" onChange="calctime(); makego()" /> slides 
@@ -175,22 +175,22 @@ $hbox = ( $_GET['h'] == 'y' ) ? 'checked="checked"' : '';
 
 	<input type="checkbox" id="cbox" name="unique" value="on" <?php echo $cbox?> onChange="makego()"  /> Unique Photo Owners (More variability)<br />
 
-	<input type="checkbox" id="hbox" name="heathermode" value="off" <?php echo $hbox?> onChange="makego()"  /> Heather Mode (Hide tags for users to guess from photos)<br />
+	<input type="checkbox" id="hbox" name="heathermode" value="off" <?php echo $hbox?> onChange="makego()"  /> gewähltes Schlagwort nicht anzeigen<br />
 
 	pecha share<br />
 	<input type="text" size="80" id="pgo" title="share url" onClick="this.select()" >
 	</div>
 
-	<input value="play" type="button" id="play" onClick="if (document.getElementById('ptag').value == '') {alert('This wont work unless you type in a tag!') } else if (document.getElementById('snum').value < 1 || document.getElementById('snum').value > 50) {alert('Number of slides must be between 1 and 50.') } else  {window.open('pecha.php?n=' + document.getElementById('snum').value  + '&h=' + document.getElementById('hbox').checked +  '&t=' + ran_string(document.getElementById('snum').value) + str_rot13(document.getElementById('ptag').value) + '&i=' + document.getElementById('inter').value + '&u=' + document.getElementById('cbox').checked , 'pecha', 'fullscreen=yes')}" />
+	<input value="play" type="button" id="play" onClick="if (document.getElementById('ptag').value == '') {alert('Du musst zuerst ein Schlagwort eingeben!') } else if (document.getElementById('snum').value < 1 || document.getElementById('snum').value > 50) {alert('Number of slides must be between 1 and 50.') } else  {window.open('pecha.php?n=' + document.getElementById('snum').value  + '&h=' + document.getElementById('hbox').checked +  '&t=' + ran_string(document.getElementById('snum').value) + str_rot13(document.getElementById('ptag').value) + '&i=' + document.getElementById('inter').value + '&u=' + document.getElementById('cbox').checked , 'pecha', 'fullscreen=yes')}" />
 	
 
 </form>
 
-<p><em>pechaflickr = the sound of random flickring</em></p>
+<p><em>pechaflickr = 'Powerpoint-Karaoke' mit Bildern</em></p>
 
-<p>Can you improv a coherent presentation from images you have never seen?</p>
+<p>Schaffst Du es, ein PechaKucha zu Dir unbekannten Bildern zu halten</p>
 
-<p>Enter a tag, press play, and see how well you can communicate a coherent message illustrated by 20 random photos, each one on screen for 20 seconds. Advanced options let you change the number of images and/or the timing.</p>
+<p>message illustrated by 20 random photos, each one on screen for 20 seconds. Advanced options let you change the number of images and/or the timing.</p>
 
 <p>Curious? <a href="http://cogdogblog.com/stuff/techtalks13/">I used pechaflickr to talk about pechaflickr.</a> If you are making use of this, <a href="http://bit.ly/pechaflickr-survey">please share with me</a>!</p>
 
