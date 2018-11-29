@@ -173,27 +173,33 @@ $hbox = ( $_GET['h'] == 'y' ) ? 'checked="checked"' : '';
 
 	<span id="runtime">6:40</span> total run time<br />
 
-	<input type="checkbox" id="cbox" name="unique" value="on" <?php echo $cbox?> onChange="makego()"  /> Unique Photo Owners (More variability)<br />
+	<input type="checkbox" id="cbox" name="unique" value="on" <?php echo $cbox?> onChange="makego()"  /> Max ein Foto von einem Account (sorgt für mehr Vielfalt)<br />
 
-	<input type="checkbox" id="hbox" name="heathermode" value="off" <?php echo $hbox?> onChange="makego()"  /> gewähltes Schlagwort nicht anzeigen<br />
+	<input type="checkbox" id="hbox" name="heathermode" value="off" <?php echo $hbox?> onChange="makego()"  /> gewähltes Schlagwort nicht anzeigen (sorgt für noch mehr Spannung)<br />
 
 	pecha share<br />
 	<input type="text" size="80" id="pgo" title="share url" onClick="this.select()" >
 	</div>
 
-	<input value="play" type="button" id="play" onClick="if (document.getElementById('ptag').value == '') {alert('Du musst zuerst ein Schlagwort eingeben!') } else if (document.getElementById('snum').value < 1 || document.getElementById('snum').value > 50) {alert('Number of slides must be between 1 and 50.') } else  {window.open('pecha.php?n=' + document.getElementById('snum').value  + '&h=' + document.getElementById('hbox').checked +  '&t=' + ran_string(document.getElementById('snum').value) + str_rot13(document.getElementById('ptag').value) + '&i=' + document.getElementById('inter').value + '&u=' + document.getElementById('cbox').checked , 'pecha', 'fullscreen=yes')}" />
+	<input value="play" type="button" id="play" onClick="if (document.getElementById('ptag').value == '') {alert('Du musst zuerst ein Schlagwort eingeben!') } else if (document.getElementById('snum').value < 1 || document.getElementById('snum').value > 50) {alert('Die Anzahl der Bilder muss zwischen 1 und 50 liegen') } else  {window.open('pecha.php?n=' + document.getElementById('snum').value  + '&h=' + document.getElementById('hbox').checked +  '&t=' + ran_string(document.getElementById('snum').value) + str_rot13(document.getElementById('ptag').value) + '&i=' + document.getElementById('inter').value + '&u=' + document.getElementById('cbox').checked , 'pecha', 'fullscreen=yes')}" />
 	
 
 </form>
 
+<p><ul>
+	<li>Pechakucha = eine Vortragstechnik, bei der zu einem mündlichen Vortrag insgesamt 20 Bilder ausgewählt werden, zu denen dann jeweils 20 Sekunden gesprochen werden kann.
+<li>Flickr = eine öffentliche Foto-Datenbank.
+	</ul>
+	<p><h3>PechaFlickr = eine Art 'PowerPoint-Karaoke' mit Bildern</h3>
+
+<p>Du wählst ein Schlagwort, zu dem Dir nach dem Start 20 zufällig ausgewählte Bilder für je 20 Sekunden angezeigt werden. Deine Herausforderung ist es, dazu einen überzeugenden Vortrag zu halten.
+<p>
+Viel Spaß! 
 <p><em>pechaflickr = 'Powerpoint-Karaoke' mit Bildern</em></p>
 
-<p>Schaffst Du es, ein PechaKucha zu Dir unbekannten Bildern zu halten</p>
-
-<p>message illustrated by 20 random photos, each one on screen for 20 seconds. Advanced options let you change the number of images and/or the timing.</p>
-
-<p>Curious? <a href="http://cogdogblog.com/stuff/techtalks13/">I used pechaflickr to talk about pechaflickr.</a> If you are making use of this, <a href="http://bit.ly/pechaflickr-survey">please share with me</a>!</p>
-
+	<h3>Tweets zu PechaFlickr</h3>
+	<p>Teile auch Deine Erfahrungen mit dem Hashtag #pechaflickr
+<p>
 <div class="aligncenter">
 <a class="twitter-timeline" data-dnt="true" width="700" data-tweet-limit="20"  href="https://twitter.com/search?q=pechaflickr" data-widget-id="598707891965571073">Tweets about pechaflickr</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
